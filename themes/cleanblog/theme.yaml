@@ -48,6 +48,10 @@ elements:
             label: Archive Index
             outfile: archives.html
             rebuild_me: 1
+          feed_recent:
+            label: 'Feed - Recent Entries'
+            outfile: 'atom.xml'
+            rebuild_me: 1
         individual:
           entry:
             label: 'Entry'
