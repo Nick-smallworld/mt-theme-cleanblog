@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <title><__trans phrase="Archive Index"> - <mt:BlogName></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<mt:ArchiveLabel>">
+    <mt:Include module="<__trans phrase="HTML Head">">
+
+</head>
+
+<body>
+
+    <mt:Include module="<__trans phrase="navigation">">
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('<mt:BlogURL>images/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                    <h1><__trans phrase="Archives"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Archive List -->
+    <div class="container">
+        <div class="row">
+            <mt:IfArchiveTypeEnabled archive_type="Monthly">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div>
+            <h2><__trans phrase="Monthly Entry Listing"></h2>
+            </div>
+              <ul>
+              <mt:ArchiveList archive_type="Monthly">
+              <li><a href="<mt:ArchiveLink>"><mt:Archivetitle></mt:ArchiveLink></li>
+              </mt:ArchiveList>
+              </ul>
+            </div>
+        </mt:IfArchiveTypeEnabled>
+                        <mt:IfArchiveTypeEnabled archive_type="Category">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div>
+            <h2><__trans phrase="Category Entry Listing"></h2>
+            </div>
+              <ul>
+              <mt:ArchiveList archive_type="Category">
+              <li><a href="<mt:ArchiveLink>"><mt:Archivetitle></mt:ArchiveLink></li>
+              </mt:ArchiveList>
+              </ul>
+            </div>
+        </mt:IfArchiveTypeEnabled>
+        </div>
+    </div>
+
+    <hr>
+
+    <mt:Include module="<__trans phrase="Footer">">
+
+</body>
+
+</html>
