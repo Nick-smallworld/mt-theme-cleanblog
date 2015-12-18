@@ -1,6 +1,7 @@
 id: cleanblog
 label: 'Clean Blog'
 name: 'Clean Blog'
+class: blog
 version: 0.2
 author_link: 'https://github.com/Nick-smallworld'
 author_name: 'Takeshi Nick Osanai'
